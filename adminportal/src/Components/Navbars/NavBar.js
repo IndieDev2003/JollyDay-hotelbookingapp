@@ -1,12 +1,13 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const MyNavbar = () => {
   return (
-    <Navbar expand="lg" bg="dark" variant="dark" className="shadow-sm px-5 py-2">
-      <Navbar.Brand as={NavLink} to="/" className="font-weight-bold">
-        Make-Holyday
+    <Navbar expand="lg" bg="dark" variant="dark" className="shadow-sm px-5 py-2 fixed-top " >
+      <Navbar.Brand as={NavLink} to="/" style={{ fontSize: '2rem', 
+      fontWeight: 'bold',}} className="font-weight-bold" >
+        JollyDay Admin
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-between">
@@ -24,7 +25,10 @@ const MyNavbar = () => {
             <NavDropdown.Item as={NavLink} to="/manage-bookings">
               Manage Bookings
             </NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to="/my-profile">
+            <NavDropdown.Item as={NavLink} to="/booking-history">
+              Booking history
+            </NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to="/profile">
               My Profile
             </NavDropdown.Item>
           </NavDropdown>
@@ -34,12 +38,12 @@ const MyNavbar = () => {
           <Nav.Link as={NavLink} to="/login" className="nav-link px-3">
             Login
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/signup" className="nav-link px-3">
+          <Nav.Link as={NavLink} to="/joinus" className="nav-link px-3">
             Join us!
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/logout" className="nav-link px-3">
+          <Button type='button' variant='dark' className="nav-link px-3">
             Logout
-          </Nav.Link>
+          </Button>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

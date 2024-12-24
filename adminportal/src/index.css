@@ -4,3 +4,7 @@ html,body {
   box-sizing: border-box;
 }
 
+.fixed-top {
+  z-index: 1030;
+ 
+}
